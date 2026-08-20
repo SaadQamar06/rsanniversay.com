@@ -1,0 +1,1592 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Anniversary Wifey ❤️</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class"
+        }
+    </script>
+
+    <style>
+
+        /* =========================================================
+           BASIC STYLING
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Cormorant Garamond", serif;
+            background:
+                linear-gradient(rgba(255, 235, 242, .78), rgba(255, 247, 238, .82)),
+                url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2200&q=85")
+                center center / cover fixed no-repeat;
+            color: #5a2636;
+            overflow-x: hidden;
+            transition: background .7s ease, color .7s ease;
+        }
+
+        body.dark {
+            background:
+                linear-gradient(rgba(18, 5, 13, .78), rgba(10, 3, 8, .84)),
+                url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2200&q=85")
+                center center / cover fixed no-repeat;
+            color: #ffe6ee;
+        }
+
+        .cursive {
+            font-family: "Great Vibes", cursive;
+        }
+
+        /* =========================================================
+           LOCK SCREEN
+        ========================================================= */
+
+        #lockScreen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background:
+                linear-gradient(rgba(28, 3, 18, .30), rgba(75, 5, 35, .68)),
+                url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2200&q=90")
+                center / cover no-repeat;
+            transition: opacity 1.2s ease, visibility 1.2s ease;
+            overflow: hidden;
+        }
+
+        body.dark #lockScreen {
+            background:
+                linear-gradient(rgba(5, 1, 8, .48), rgba(28, 2, 18, .78)),
+                url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2200&q=90")
+                center / cover no-repeat;
+        }
+
+        #lockScreen::before {
+            content: "♥  ✦  ♥  ✦  ♥";
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,220,150,.55);
+            font-size: 20px;
+            letter-spacing: 18px;
+            white-space: nowrap;
+            text-shadow: 0 0 18px rgba(255,105,150,.8);
+            animation: romanticLights 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        #lockScreen::after {
+            content: "♡";
+            position: absolute;
+            right: 7%;
+            bottom: 8%;
+            color: rgba(255,210,120,.65);
+            font-size: 80px;
+            filter: drop-shadow(0 0 20px rgba(255,105,150,.7));
+            animation: heartBeat 2s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes romanticLights {
+            0%,100% { opacity: .35; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(5px); }
+        }
+
+        #lockScreen.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .lock-card {
+            width: min(940px, 96vw);
+            min-height: 560px;
+            padding: 38px;
+            text-align: center;
+            border: 1px solid rgba(255, 210, 120, .65);
+            border-radius: 38px;
+            background:
+                linear-gradient(135deg, rgba(55, 7, 28, .58), rgba(105, 18, 55, .42)),
+                rgba(255,255,255,.12);
+            backdrop-filter: blur(24px) saturate(145%);
+            box-shadow:
+                0 30px 100px rgba(20, 0, 12, .55),
+                0 0 70px rgba(255, 80, 140, .18),
+                inset 0 0 45px rgba(255,255,255,.10);
+            animation: cardFloat 4s ease-in-out infinite;
+            display: grid;
+            grid-template-columns: minmax(320px, .95fr) minmax(340px, 1.05fr);
+            align-items: center;
+            gap: 42px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .lock-photo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-height: 450px;
+        }
+
+        .lock-photo-wrap::before {
+            content: "♥";
+            position: absolute;
+            top: 24px;
+            left: 28px;
+            color: #ffd66b;
+            font-size: 30px;
+            filter: drop-shadow(0 0 12px rgba(255,105,150,.8));
+            animation: heartBeat 1.7s infinite;
+        }
+
+        .lock-photo-wrap::after {
+            content: "✦";
+            position: absolute;
+            bottom: 55px;
+            right: 28px;
+            color: #fff0b0;
+            font-size: 30px;
+            filter: drop-shadow(0 0 14px rgba(255,220,120,.9));
+            animation: photoSparkle 2.2s ease-in-out infinite;
+        }
+
+        .lock-photo {
+            width: 330px;
+            height: 330px;
+            margin: 0;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #e6bd55;
+            padding: 8px;
+            background: rgba(255,255,255,.92);
+            box-shadow:
+                0 0 0 2px rgba(255,255,255,.35),
+                0 0 35px rgba(212,175,55,.65),
+                0 0 90px rgba(255,80,145,.40);
+            animation: photoGlow 3s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-photo-wrap .photo-ring {
+            position: absolute;
+            width: 365px;
+            height: 365px;
+            border: 1px solid rgba(255,220,140,.65);
+            border-radius: 50%;
+            box-shadow: 0 0 35px rgba(255,105,150,.25);
+            animation: ringPulse 3s ease-in-out infinite;
+        }
+
+        .lock-content {
+            padding: 10px 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-content .pin-input {
+            background: rgba(255,255,255,.13);
+            border-color: rgba(255,220,140,.55);
+            color: #fff;
+        }
+
+        .lock-content .pin-input::placeholder {
+            color: rgba(255,255,255,.72);
+        }
+
+        .lock-content .lock-subtitle {
+            color: #ffd9e6;
+        }
+
+        .lock-content h1 {
+            color: #fff4f7;
+            text-shadow: 0 4px 22px rgba(0,0,0,.35);
+        }
+
+        .lock-content > p {
+            color: rgba(255,245,248,.88);
+        }
+
+        @keyframes ringPulse {
+            0%,100% { transform: scale(1); opacity: .7; }
+            50% { transform: scale(1.035); opacity: 1; }
+        }
+
+        @keyframes photoSparkle {
+            0%,100% { transform: translateY(0) rotate(0deg) scale(1); opacity: .65; }
+            50% { transform: translateY(-8px) rotate(12deg) scale(1.18); opacity: 1; }
+        }
+
+        body.dark .lock-card {
+            background: rgba(40, 10, 20, .65);
+            box-shadow:
+                0 25px 80px rgba(0,0,0,.55),
+                inset 0 0 30px rgba(255,255,255,.03);
+        }
+
+        @keyframes cardFloat {
+            0%,100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* =========================================================
+           LOCK SCREEN PHOTO
+           CHANGE THIS IMAGE
+        ========================================================= */
+
+        .lock-photo {
+            width: 155px;
+            height: 155px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #d4af37;
+            padding: 5px;
+            background: white;
+            box-shadow:
+                0 0 25px rgba(212,175,55,.45),
+                0 0 70px rgba(255,105,150,.25);
+            animation: photoGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes photoGlow {
+            0%,100% {
+                box-shadow: 0 0 20px rgba(212,175,55,.4);
+            }
+            50% {
+                box-shadow: 0 0 45px rgba(255,105,150,.65);
+            }
+        }
+
+        .lock-card::before {
+            content: "♡";
+            position: absolute;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 76px;
+            height: 76px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,.82);
+            border: 1px solid rgba(212,175,55,.55);
+            color: #b58a24;
+            font-size: 42px;
+            box-shadow: 0 12px 35px rgba(80,20,45,.22);
+        }
+
+        .lock-card { position: relative; margin-top: 20px; }
+
+        .lock-subtitle {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #9b5870;
+            margin-bottom: 10px;
+        }
+
+        .pin-dots {
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            margin: 14px 0 -2px;
+        }
+
+        .pin-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(142,61,89,.22);
+        }
+
+        body.dark .lock-card {
+            background:
+                linear-gradient(135deg, rgba(28, 2, 16, .78), rgba(70, 5, 34, .62)),
+                rgba(20,2,12,.55);
+        }
+
+        body.dark .lock-card::before {
+            background: rgba(35,8,20,.88);
+            color: #e4c765;
+        }
+
+        /* =========================================================
+           PIN INPUT
+        ========================================================= */
+
+        .pin-input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 16px;
+            border: 2px solid rgba(212,175,55,.45);
+            outline: none;
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 12px;
+            background: rgba(255,255,255,.75);
+            color: #6b263c;
+            transition: .3s;
+        }
+
+        .pin-input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 25px rgba(212,175,55,.3);
+            transform: scale(1.02);
+        }
+
+        body.dark .pin-input {
+            background: rgba(255,255,255,.08);
+            color: white;
+        }
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .romantic-btn {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212,175,55,.6);
+            background: linear-gradient(135deg, #c9899f, #8e3d59);
+            color: white;
+            padding: 13px 25px;
+            border-radius: 999px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(142,61,89,.25);
+            transition: .3s;
+        }
+
+        .romantic-btn:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow:
+                0 15px 40px rgba(142,61,89,.4),
+                0 0 25px rgba(212,175,55,.25);
+        }
+
+        .romantic-btn:active {
+            transform: scale(.94);
+        }
+
+        .romantic-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,.5),
+                transparent
+            );
+            transform: skewX(-20deg);
+            animation: buttonShine 3s infinite;
+        }
+
+        @keyframes buttonShine {
+            0% {
+                left: -100%;
+            }
+            45%,100% {
+                left: 140%;
+            }
+        }
+
+        /* =========================================================
+           WRONG PIN SHAKE
+        ========================================================= */
+
+        .shake {
+            animation: shake .45s;
+        }
+
+        @keyframes shake {
+            0%,100% { transform: translateX(0); }
+            20% { transform: translateX(-12px); }
+            40% { transform: translateX(12px); }
+            60% { transform: translateX(-9px); }
+            80% { transform: translateX(9px); }
+        }
+
+        /* =========================================================
+           FLOATING BACKGROUND HEARTS
+        ========================================================= */
+
+        .background-heart {
+            position: fixed;
+            bottom: -50px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: .4;
+            animation: riseHeart linear forwards;
+        }
+
+        @keyframes riseHeart {
+            from {
+                transform: translateY(0) rotate(0deg) scale(.7);
+                opacity: 0;
+            }
+            15% {
+                opacity: .5;
+            }
+            to {
+                transform: translateY(-110vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================================
+           SPARKLES
+        ========================================================= */
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2;
+            animation: sparkleMove 1.5s forwards;
+        }
+
+        @keyframes sparkleMove {
+            0% {
+                opacity: 1;
+                transform: scale(0) translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5) translateY(-30px);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0) translateY(-70px);
+            }
+        }
+
+        /* =========================================================
+           MAIN CONTENT
+        ========================================================= */
+
+        #mainWebsite {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        #mainWebsite.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass {
+            background: rgba(255,255,255,.38);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(212,175,55,.3);
+            box-shadow: 0 20px 60px rgba(100,30,50,.12);
+        }
+
+        /* Romantic photo sections */
+        .romantic-photo-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: radial-gradient(circle at center, transparent 20%, rgba(90, 20, 45, .12) 100%);
+        }
+
+        body.dark .glass {
+            background: rgba(255,255,255,.055);
+            border-color: rgba(212,175,55,.22);
+            box-shadow: 0 20px 60px rgba(0,0,0,.35);
+        }
+
+        /* =========================================================
+           HERO ANIMATION
+        ========================================================= */
+
+        .hero-heart {
+            animation: heartBeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartBeat {
+            0%,100% {
+                transform: scale(1);
+            }
+            15% {
+                transform: scale(1.25);
+            }
+            30% {
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1.18);
+            }
+        }
+
+        /* =========================================================
+           PHOTO SLIDER
+        ========================================================= */
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            height: 430px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 30px;
+            border: 2px solid rgba(212,175,55,.45);
+            box-shadow: 0 25px 70px rgba(80,20,40,.2);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.08);
+            transition: opacity 1s ease, transform 5s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* =========================================================
+           DOTS
+        ========================================================= */
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.5);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .dot.active {
+            width: 25px;
+            border-radius: 20px;
+            background: #d4af37;
+        }
+
+        /* =========================================================
+           WISH ANIMATION
+        ========================================================= */
+
+        .wish-text {
+            min-height: 100px;
+            animation: wishAppear .7s ease;
+        }
+
+        @keyframes wishAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* =========================================================
+           YEARS COUNTER
+        ========================================================= */
+
+        .counter-number {
+            font-size: 65px;
+            font-weight: bold;
+            color: #b58a24;
+            text-shadow: 0 0 25px rgba(212,175,55,.3);
+        }
+
+        body.dark .counter-number {
+            color: #e4c765;
+        }
+
+        /* =========================================================
+           SPECIAL ENDING
+        ========================================================= */
+
+        .ending-heart {
+            animation:
+                heartBeat 1.3s infinite,
+                endingGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes endingGlow {
+            0%,100% {
+                filter: drop-shadow(0 0 5px rgba(255,100,150,.2));
+            }
+            50% {
+                filter: drop-shadow(0 0 25px rgba(255,100,150,.8));
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media(max-width:640px) {
+
+            .slider-container {
+                height: 330px;
+                border-radius: 22px;
+            }
+
+            .counter-number {
+                font-size: 48px;
+            }
+
+            .lock-card {
+                width: min(94vw, 520px);
+                min-height: auto;
+                padding: 30px 20px 34px;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                border-radius: 30px;
+            }
+
+            .lock-photo-wrap {
+                min-height: 300px;
+            }
+
+            .lock-photo {
+                width: 245px;
+                height: 245px;
+            }
+
+            .lock-photo-wrap .photo-ring {
+                width: 275px;
+                height: 275px;
+            }
+
+            .lock-content {
+                padding: 0;
+            }
+
+            .lock-content h1 {
+                font-size: 44px !important;
+            }
+
+            .hero-title {
+                font-size: 52px !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="romantic-photo-bg"></div>
+
+    <!-- =========================================================
+         LOCK SCREEN
+    ========================================================= -->
+
+    <section id="lockScreen">
+
+        <!-- Dark/Light Toggle -->
+        <button
+            onclick="toggleTheme()"
+            class="absolute top-5 right-5 romantic-btn text-sm"
+        >
+            🌙 / ☀️
+        </button>
+
+        <div id="lockCard" class="lock-card">
+
+            <!-- =====================================================
+                 LEFT SIDE: LARGE CIRCULAR PHOTO
+                 CHANGE THIS PHOTO
+            ====================================================== -->
+            <div class="lock-photo-wrap">
+                <div class="photo-ring"></div>
+                <img
+                    src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.18 AM.jpeg"
+                    alt="Our Photo"
+                    class="lock-photo"
+                >
+            </div>
+
+            <!-- =====================================================
+                 RIGHT SIDE: PIN PANEL
+            ====================================================== -->
+            <div class="lock-content">
+
+                <div class="text-5xl mb-3">
+                    🔐 ❤️
+                </div>
+
+                <div class="lock-subtitle">Just You & Me • Forever</div>
+
+                <h1 class="cursive text-5xl mb-3">
+                    Our Little Secret
+                </h1>
+
+                <p class="text-lg opacity-80 mb-6">
+                    Enter our special PIN to unlock ❤️
+                </p>
+
+                <!-- CHANGE PIN HERE -->
+                <input
+                    id="pinInput"
+                    class="pin-input"
+                    type="password"
+                    maxlength="4"
+                    inputmode="numeric"
+                    placeholder="••••"
+                >
+
+                <button
+                    onclick="unlockWebsite()"
+                    class="romantic-btn mt-5 w-full"
+                >
+                    Unlock My Heart ❤️
+                </button>
+
+                
+
+                <p
+                    id="pinMessage"
+                    class="mt-4 font-bold min-h-[25px]"
+                ></p>
+
+                <p class="text-sm opacity-70 mt-5">
+                    This is our little world, made with love 💕
+                </p>
+
+                <p class="cursive text-2xl mt-4" style="color:#ffd98a;">
+                    Every love story is beautiful, but ours is my favorite. ❤️
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         MAIN WEBSITE
+    ========================================================= -->
+
+    <main id="mainWebsite">
+
+        <!-- =====================================================
+             NAVBAR
+        ====================================================== -->
+
+        <nav class="fixed top-0 left-0 right-0 z-50 p-4">
+            <div class="max-w-6xl mx-auto glass rounded-full px-5 py-3 flex justify-between items-center">
+
+                <span class="cursive text-2xl">
+                    Our Beautiful Life Journey ❤️
+                </span>
+
+                <button
+                    onclick="toggleTheme()"
+                    class="romantic-btn text-sm"
+                >
+                    🌙 / ☀️
+                </button>
+
+            </div>
+        </nav>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="min-h-screen flex items-center justify-center px-5 pt-24 relative">
+
+            <div class="text-center max-w-4xl relative z-10">
+
+                <div class="text-6xl mb-5 hero-heart">
+                    💕
+                </div>
+
+                <p class="uppercase tracking-[5px] text-sm opacity-70 mb-5">
+                    To My Beautiful Wife
+                </p>
+
+                <h1 class="cursive hero-title text-7xl md:text-8xl leading-tight">
+                    Happy Anniversary My کُل کائنات
+                    <span class="hero-heart">❤️</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl mt-7 opacity-80">
+                    The happiness in everything, the smile in every moment, and the joy of everything in this world are with you. I want to experience every happiness, every beautiful moment, and every joy of life with you. ❤️
+
+                </p>
+
+                <div class="mt-10 flex justify-center gap-4 flex-wrap">
+
+                    <a
+                        href="#memories"
+                        class="romantic-btn"
+                    >
+                        Our Memories 📸
+                    </a>
+
+                    <a
+                        href="#wishes"
+                        class="romantic-btn"
+                    >
+                        My Wishes 🤲
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             PHOTO MEMORIES
+             ADD YOUR PHOTOS HERE
+             You can add between 1 and 10 photos.
+        ====================================================== -->
+
+        <section
+            id="memories"
+            class="py-24 px-5"
+        >
+
+            <div class="max-w-5xl mx-auto">
+
+                <div class="text-center mb-12">
+
+                   
+
+                    <h2 class="cursive text-5xl md:text-6xl mt-3">
+                        Some of our fun memories and beautiful moments together❤️
+                    </h2>
+
+                </div>
+
+
+                <div class="slider-container"> ">
+
+                    <!-- ADD YOUR PHOTOS HERE -->
+
+                   <img
+                    src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.19 AM (1).jpeg" 
+                    class="slide"
+                    alt="Our Memory 1">
+
+                    <img
+                        src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.16 AM.jpeg"
+                        class="slide"
+                        alt="Our Memory 2"
+                    >
+
+                    <img
+                        src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.17 AM.jpeg"
+                        class="slide"
+                        alt="Our Memory 3"
+                    >
+                    <img
+                     class="slide"
+                     src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.17 AM (1).jpeg" 
+                    alt="Our Memory 4"
+                    >
+                    <img
+                     src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.19 AM.jpeg"
+                     class="slide"
+                    alt="Our Memory 5">
+
+                    <img
+                     src="c:\Users\Sad999\Pictures\whatsapp\WhatsApp Image 2026-08-21 at 12.33.19 AM (2).jpeg"
+                     class="slide"
+                    alt="Our Memory 6">
+                
+                </div>
+
+
+                <!-- Slider Controls -->
+
+                <div class="flex justify-center items-center gap-5 mt-6">
+
+                    <button
+                        onclick="previousSlide()"
+                        class="romantic-btn"
+                    >
+                        ❮
+                    </button>
+
+                    <div
+                        id="dots"
+                        class="flex gap-2 items-center"
+                    ></div>
+
+                    <button
+                        onclick="nextSlide()"
+                        class="romantic-btn"
+                    >
+                        ❯
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             WISHES
+        ====================================================== -->
+
+        <section
+            id="wishes"
+            class="py-24 px-5"
+        >
+
+            <div class="max-w-4xl mx-auto glass rounded-[35px] p-8 md:p-14 text-center">
+
+                <div class="text-5xl mb-5">
+                    🤲 ❤️
+                </div>
+
+                <p class="uppercase tracking-[4px] text-sm opacity-60">
+                    My Dua For Us
+                </p>
+
+                <h2 class="cursive text-5xl md:text-6xl mt-3 mb-8">
+                    A Little Wish For My Wifey
+                </h2>
+
+                <div
+                    id="wishText"
+                    class="wish-text text-xl md:text-2xl leading-relaxed flex items-center justify-center"
+                >
+                    Alhamdulillah for you. May Allah keep us together in this dunya and Jannah. May Allah protect us. With you every day feels like a dua accepted. Jazakillahu khair for being mine. Till Jannah inshaAllah.❤️          
+                     </div>
+
+                <button
+                    onclick="nextWish()"
+                    class="romantic-btn mt-8"
+                >
+                    Another Wish For You ✨
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             YEARS MARRIED
+             CHANGE WEDDING YEAR HERE
+        ====================================================== -->
+
+        <section class="py-24 px-5 text-center">
+
+            <div class="max-w-3xl mx-auto glass rounded-[35px] p-10">
+
+                <div class="text-5xl mb-5">
+                    💍
+                </div>
+
+                <p class="uppercase tracking-[4px] text-sm opacity-60">
+                    Our Journey
+                </p>
+
+                <h2 class="cursive text-5xl mt-3">
+                    Years Of Togetherness
+                </h2>
+
+                <div
+                    id="yearsCounter"
+                    class="counter-number mt-5"
+                >
+                    0
+                </div>
+
+                <p class="text-lg opacity-70">
+                    beautiful years of love, laughter & memories ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SPECIAL MESSAGE
+        ====================================================== -->
+
+        <section class="py-24 px-5">
+
+            <div class="max-w-4xl mx-auto text-center">
+
+                <div class="text-6xl ending-heart mb-8">
+                    ❤️
+                </div>
+
+                <h2 class="cursive text-6xl md:text-7xl">
+                    And I Would Choose You Again...
+                </h2>
+
+                <p class="text-xl md:text-2xl leading-relaxed mt-8 opacity-80">
+                    In every lifetime, in every chapter,
+                    through every smile and every difficult day,
+                    I would still choose you.
+                    <br><br>
+                    May Allah keep our hearts close,
+                    increase love between us,
+                    and bless our journey together.🤲❤️
+                    <br><br>
+                    تم ساتھ ہو تو ہر لمحہ خاص لگتا ہے،
+تمہاری مسکراہٹ میں میرا جہاں بستا ہے۔ ❤️
+دنیا کی ہر خوشی کم لگتی ہے تمہارے بغیر，
+تم ہو تو زندگی کا ہر رنگ حسین لگتا ہے۔ 💕
+
+                </p>
+
+                <div class="mt-10">
+                    <button
+                        onclick="finalSurprise()"
+                        class="romantic-btn text-lg"
+                    >
+                        One Last Surprise 💝
+                    </button>
+                </div>
+
+                <div
+                    id="finalMessage"
+                    class="hidden mt-10 cursive text-4xl md:text-5xl"
+                >
+                    You are not just my wife...
+                    <br>
+                    You are my favorite part of life.😩❤️
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="py-12 text-center border-t border-pink-200/20">
+
+            <div class="text-4xl mb-4">
+                💕
+            </div>
+
+            <p class="cursive text-3xl">
+                Forever Yours Meeeeeeeeeeeeeeeeeen.💞
+            </p>
+
+            <p class="mt-5 text-md opacity-200 font-bold">
+                BY YOUR LOVELY GAWAR Saaaaaaaaaad❤️🐒
+            </p>
+            <br>
+            <p class=" text-3xl">
+                I LOVE YOU MEEEEEEEEEEEEEEEEEEEN FOREVER😩💞
+            </p>
+            <br>
+            <p class=" text-3xl">
+                "Thank you for being with me through every high and low.I’m so grateful to have you by my side always."💞
+                </p>
+
+
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =========================================================
+           CHANGE PIN HERE
+        ========================================================= */
+
+        const SECRET_PIN = "2206";
+
+
+        /* =========================================================
+           CHANGE WEDDING YEAR HERE
+        ========================================================= */
+
+        const WEDDING_YEAR = 2022;
+
+
+        /* =========================================================
+           LOCK SCREEN
+        ========================================================= */
+
+        function unlockWebsite() {
+
+            const input = document.getElementById("pinInput");
+            const message = document.getElementById("pinMessage");
+            const lockCard = document.getElementById("lockCard");
+            const lockScreen = document.getElementById("lockScreen");
+            const mainWebsite = document.getElementById("mainWebsite");
+
+            if (input.value === SECRET_PIN) {
+
+                message.textContent = "Unlocked ❤️";
+
+                message.style.color = "#b58a24";
+
+                createHeartBurst();
+
+                setTimeout(() => {
+
+                    lockScreen.classList.add("hide");
+
+                    setTimeout(() => {
+                        mainWebsite.classList.add("show");
+                    }, 500);
+
+                }, 700);
+
+            } else {
+
+                message.textContent = "Try again wifey";
+
+                message.style.color = "#c44";
+
+                lockCard.classList.remove("shake");
+
+                void lockCard.offsetWidth;
+
+                lockCard.classList.add("shake");
+
+                input.value = "";
+
+            }
+
+        }
+
+
+        /* Enter key unlock */
+
+        document
+            .getElementById("pinInput")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+                    unlockWebsite();
+                }
+
+            });
+
+
+        /* =========================================================
+           THEME
+        ========================================================= */
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("dark");
+
+            const isDark =
+                document.body.classList.contains("dark");
+
+            localStorage.setItem(
+                "romanticTheme",
+                isDark ? "dark" : "light"
+            );
+
+        }
+
+
+        /* Remember selected theme */
+
+        if (localStorage.getItem("romanticTheme") === "dark") {
+            document.body.classList.add("dark");
+        }
+
+
+        /* =========================================================
+           PHOTO SLIDER
+        ========================================================= */
+
+        const slides =
+            document.querySelectorAll(".slide");
+
+        const dotsContainer =
+            document.getElementById("dots");
+
+        let currentSlide = 0;
+
+
+        /* Create slider dots */
+
+        slides.forEach((slide, index) => {
+
+            const dot =
+                document.createElement("div");
+
+            dot.className =
+                "dot" + (index === 0 ? " active" : "");
+
+            dot.onclick = () => {
+                showSlide(index);
+            };
+
+            dotsContainer.appendChild(dot);
+
+        });
+
+
+        function showSlide(index) {
+
+            slides[currentSlide].classList.remove("active");
+
+            document
+                .querySelectorAll(".dot")[currentSlide]
+                .classList.remove("active");
+
+            currentSlide =
+                (index + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+
+            document
+                .querySelectorAll(".dot")[currentSlide]
+                .classList.add("active");
+
+        }
+
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+
+        /* Auto slide every 4 seconds */
+
+        setInterval(() => {
+            nextSlide();
+        }, 4000);
+
+
+        /* =========================================================
+           WISHES
+        ========================================================= */
+
+        const wishes = [
+
+            "Alhamdulillah for you. Ya Allah, barik lana fi zawjati. May we grow old together in Your blessings.",
+
+            "Ya Allah, keep love, mercy and peace between our hearts. Protect us and bless every step of our journey together. 🤲❤️",
+
+            "May Allah make our hearts full of love, and our future full of beautiful memories together. Ameen. ❤️"
+
+        ];
+
+        let wishIndex = 0;
+
+
+        function nextWish() {
+
+            wishIndex =
+                (wishIndex + 1) % wishes.length;
+
+            const wishText =
+                document.getElementById("wishText");
+
+            wishText.classList.remove("wish-text");
+
+            void wishText.offsetWidth;
+
+            wishText.textContent =
+                wishes[wishIndex];
+
+            wishText.classList.add("wish-text");
+
+            createHeartBurst();
+
+        }
+
+
+        /* =========================================================
+           YEARS COUNTER
+        ========================================================= */
+
+        function updateYears() {
+
+            const currentYear =
+                new Date().getFullYear();
+
+            const years =
+                Math.max(0, currentYear - WEDDING_YEAR);
+
+            const counter =
+                document.getElementById("yearsCounter");
+
+            let number = 0;
+
+            const animation =
+                setInterval(() => {
+
+                    number++;
+
+                    counter.textContent =
+                        number;
+
+                    if (number >= years) {
+                        clearInterval(animation);
+                    }
+
+                }, 100);
+
+        }
+
+        updateYears();
+
+
+        /* =========================================================
+           FLOATING HEART BACKGROUND
+        ========================================================= */
+
+        function createBackgroundHeart() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className =
+                "background-heart";
+
+            const hearts = [
+                "❤️",
+                "💕",
+                "💗",
+                "💖",
+                "💞",
+                "✨",
+                "🌸"
+            ];
+
+            heart.textContent =
+                hearts[
+                    Math.floor(
+                        Math.random() * hearts.length
+                    )
+                ];
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (12 + Math.random() * 28) + "px";
+
+            heart.style.animationDuration =
+                (7 + Math.random() * 8) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 16000);
+
+        }
+
+
+        /* Continuous background animation */
+
+        setInterval(
+            createBackgroundHeart,
+            1000
+        );
+
+
+        /* =========================================================
+           CLICK HEART + SPARKLE EFFECT
+        ========================================================= */
+
+        document.addEventListener("click", function(event) {
+
+            createClickEffect(
+                event.clientX,
+                event.clientY
+            );
+
+        });
+
+
+        function createClickEffect(x, y) {
+
+            const symbols = [
+                "❤️",
+                "💕",
+                "✨",
+                "💖",
+                "🌸"
+            ];
+
+            for (let i = 0; i < 5; i++) {
+
+                const element =
+                    document.createElement("div");
+
+                element.className =
+                    "sparkle";
+
+                element.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random() * symbols.length
+                        )
+                    ];
+
+                element.style.left =
+                    (x + Math.random() * 80 - 40) + "px";
+
+                element.style.top =
+                    (y + Math.random() * 80 - 40) + "px";
+
+                element.style.fontSize =
+                    (14 + Math.random() * 18) + "px";
+
+                document.body.appendChild(element);
+
+                setTimeout(() => {
+                    element.remove();
+                }, 1500);
+
+            }
+
+        }
+
+
+        /* =========================================================
+           HEART BURST
+        ========================================================= */
+
+        function createHeartBurst() {
+
+            for (let i = 0; i < 20; i++) {
+
+                const heart =
+                    document.createElement("div");
+
+                heart.textContent = "❤️";
+
+                heart.style.position = "fixed";
+
+                heart.style.left = "50%";
+                heart.style.top = "50%";
+
+                heart.style.zIndex = "10000";
+
+                heart.style.pointerEvents = "none";
+
+                heart.style.fontSize =
+                    (15 + Math.random() * 25) + "px";
+
+                const x =
+                    (Math.random() - .5) * 500;
+
+                const y =
+                    (Math.random() - .5) * 500;
+
+                heart.animate(
+                    [
+                        {
+                            transform: "translate(-50%,-50%) scale(0)",
+                            opacity: 1
+                        },
+                        {
+                            transform:
+                                `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(1.5)`,
+                            opacity: 0
+                        }
+                    ],
+                    {
+                        duration: 1300 + Math.random() * 700,
+                        easing: "ease-out"
+                    }
+                );
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 2200);
+
+            }
+
+        }
+
+
+        /* =========================================================
+           FINAL SURPRISE
+        ========================================================= */
+
+        function finalSurprise() {
+
+            const finalMessage =
+                document.getElementById("finalMessage");
+
+            finalMessage.classList.remove("hidden");
+
+            createHeartBurst();
+
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+ 
